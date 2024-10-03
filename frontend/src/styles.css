@@ -1,0 +1,12 @@
+@import "reset.css";
+
+@layer base {
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    html, body {
+        /* 禁用 Safari 的弹性滚动 */
+        overscroll-behavior: none;
+    }
+}

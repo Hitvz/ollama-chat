@@ -2,9 +2,9 @@
   "$schema": "https://wails.io/schemas/config.v2.json",
   "name": "ollama-chat",
   "outputfilename": "ollama-chat",
-  "frontend:install": "cnpm install",
-  "frontend:build": "cnpm run build",
-  "frontend:dev:watcher": "cnpm run dev",
+  "frontend:install": "pnpm install",
+  "frontend:build": "pnpm run build",
+  "frontend:dev:watcher": "pnpm run dev",
   "frontend:dev:serverUrl": "auto",
   "author": {
     "name": "HitvzByHui",

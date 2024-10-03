@@ -1,0 +1,29 @@
+<script setup>
+
+import Header from "./Header.vue";
+import Body from "./Body.vue";
+</script>
+
+<template>
+  <div class="layout">
+    <Header/>
+    <Body/>
+  </div>
+</template>
+
+<style scoped>
+.layout {
+  @apply flex flex-col;
+  @apply bg-gray-100;
+  /* background-color: rgb(244, 244, 246); */
+}
+
+.layout > main {
+  @apply flex flex-col items-start justify-start;
+  @apply min-h-screen overflow-scroll pt-20;
+}
+
+.layout > header {
+  @apply h-20;
+}
+</style>
