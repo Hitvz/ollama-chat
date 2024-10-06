@@ -1,6 +1,6 @@
 <script setup>
 import {onMounted, ref} from 'vue'
-import ollama from 'ollama'
+import ollama from 'ollama/browser'
 import pinia from "../stores/declare-pinia.js";
 import useSetting from "../stores/setting.js";
 import useGlobalConfig from "../stores/global-config.js";

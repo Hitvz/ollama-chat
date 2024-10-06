@@ -1,5 +1,5 @@
 import request from './request'
-import ollama from 'ollama'
+import ollama from 'ollama/browser'
 
 export function gen(data) {
   return fetch('/api/generate', {

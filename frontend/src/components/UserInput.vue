@@ -8,7 +8,7 @@ import useSetting from "../stores/setting.js";
 import pinia from "../stores/declare-pinia.js";
 import {ROLE_ASSISTANT, ROLE_USER} from "../utils/role.js";
 import {makeId} from "../utils/utils.js";
-import ollama from 'ollama'
+import ollama from 'ollama/browser'
 import {ElMessage} from "element-plus";
 
 const messageListStore = useMessageList(pinia);
