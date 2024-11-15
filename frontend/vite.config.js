@@ -12,5 +12,11 @@ export default defineConfig({
     }),
     Components({
       resolvers: [ElementPlusResolver()],
-    })]
+    })],
+  server: {
+    hmr: {
+      host: 'localhost',
+      protocol: 'ws',
+    },
+  }
 })
