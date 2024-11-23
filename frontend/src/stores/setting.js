@@ -6,7 +6,7 @@ const useSettingStore = defineStore('setting', {
       setting: {
         apiPlatform: 'Ollama',
         host: 'http://127.0.0.1:11434',
-        aiModel: 'qwen2:latest',
+        aiModel: 'qwen2.5:latest',
         apiMode: 'generate'
       }
     }

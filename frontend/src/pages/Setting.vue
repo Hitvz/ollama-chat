@@ -1,11 +1,12 @@
 <script setup>
 import {onMounted, ref} from 'vue'
-import ollama from 'ollama/browser'
+import {Ollama} from 'ollama/browser'
 import pinia from "../stores/declare-pinia.js";
 import useSetting from "../stores/setting.js";
 import useGlobalConfig from "../stores/global-config.js";
 import {ElNotification} from "element-plus";
-import { useRouter } from 'vue-router'
+import {useRouter} from 'vue-router'
+
 const router = useRouter()
 
 const useSettingStore = useSetting(pinia);
@@ -31,6 +32,7 @@ const onSubmit = () => {
 
 onMounted(() => {
   try {
+    const ollama = new Ollama({host: useSettingStore.setting.host})
     const modelList = ollama.list();
     modelList.then((listResponse) => {
       console.log(listResponse, listResponse.models, optionAiModel)
@@ -70,8 +72,8 @@ onMounted(() => {
       </el-form-item>
       <el-form-item label="聊天模式">
         <el-radio-group v-model="setting.apiMode">
-          <el-radio-button label="生成回答" value="generate" />
-          <el-radio-button label="&emsp;对话&emsp;" value="chat" />
+          <el-radio-button label="生成回答" value="generate"/>
+          <el-radio-button label="&emsp;对话&emsp;" value="chat"/>
         </el-radio-group>
       </el-form-item>
       <el-form-item>

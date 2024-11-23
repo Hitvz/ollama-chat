@@ -8,7 +8,7 @@ import useSetting from "../stores/setting.js";
 import pinia from "../stores/declare-pinia.js";
 import {ROLE_ASSISTANT, ROLE_USER} from "../utils/role.js";
 import {makeId} from "../utils/utils.js";
-import ollama from 'ollama/browser'
+import {Ollama} from 'ollama/browser'
 import {ElMessage} from "element-plus";
 
 const messageListStore = useMessageList(pinia);
@@ -121,6 +121,7 @@ export default {
       // }
     },
     async requestApi(model, ask, apiMode) {
+      const ollama = new Ollama({host: useSettingStore.setting.host})
       if (apiMode === 'chat') {
         console.log('messages', this.chatModeMessageList)
         await ollama.chat({
